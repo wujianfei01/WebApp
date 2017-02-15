@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMvcWebApp", "MyMvcWebApp.csproj", "{6F518F41-736C-401F-9CD2-0662162F3575}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReferenceDll", "ReferenceDll", "{5E382A73-752F-4099-956C-BE0633F5588C}"
+	ProjectSection(SolutionItems) = preProject
+		..\ReferenceDll\Antlr3.Runtime.dll = ..\ReferenceDll\Antlr3.Runtime.dll
+		..\ReferenceDll\log4net.dll = ..\ReferenceDll\log4net.dll
+		..\ReferenceDll\log4net.xml = ..\ReferenceDll\log4net.xml
+		..\ReferenceDll\NativeExcel.dll = ..\ReferenceDll\NativeExcel.dll
+		..\ReferenceDll\Newtonsoft.Json.dll = ..\ReferenceDll\Newtonsoft.Json.dll
+		..\ReferenceDll\Newtonsoft.Json.xml = ..\ReferenceDll\Newtonsoft.Json.xml
+		..\ReferenceDll\Oracle.ManagedDataAccess.dll = ..\ReferenceDll\Oracle.ManagedDataAccess.dll
+		..\ReferenceDll\System.Data.OracleClient.dll = ..\ReferenceDll\System.Data.OracleClient.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "..\BLL\BLL.csproj", "{15FF42F3-AECF-41A7-BC6C-921EC5307963}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "..\DAL\DAL.csproj", "{C4A31160-C066-464F-9404-E92875854B7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MODEL", "..\MODEL\MODEL.csproj", "{B2F6AF3B-0B66-47B7-AB95-4EE397D60726}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Util", "..\Util\Util.csproj", "{13FC860A-DE49-428D-A011-CEA23C6080FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F518F41-736C-401F-9CD2-0662162F3575}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F518F41-736C-401F-9CD2-0662162F3575}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F518F41-736C-401F-9CD2-0662162F3575}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F518F41-736C-401F-9CD2-0662162F3575}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15FF42F3-AECF-41A7-BC6C-921EC5307963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15FF42F3-AECF-41A7-BC6C-921EC5307963}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15FF42F3-AECF-41A7-BC6C-921EC5307963}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15FF42F3-AECF-41A7-BC6C-921EC5307963}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4A31160-C066-464F-9404-E92875854B7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4A31160-C066-464F-9404-E92875854B7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4A31160-C066-464F-9404-E92875854B7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4A31160-C066-464F-9404-E92875854B7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2F6AF3B-0B66-47B7-AB95-4EE397D60726}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2F6AF3B-0B66-47B7-AB95-4EE397D60726}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2F6AF3B-0B66-47B7-AB95-4EE397D60726}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2F6AF3B-0B66-47B7-AB95-4EE397D60726}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13FC860A-DE49-428D-A011-CEA23C6080FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13FC860A-DE49-428D-A011-CEA23C6080FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13FC860A-DE49-428D-A011-CEA23C6080FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13FC860A-DE49-428D-A011-CEA23C6080FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

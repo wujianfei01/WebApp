@@ -1,0 +1,128 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@Util.ConfigManager.ReadValueByKey(Util.ConfigurationFile.WebConfig, "WebMainTitle")</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body class="easyui-layout">
+    <div id="OverTimeLogin" class="easyui-dialog" data-options="closed:true,modal:true">
+        <iframe width="726px" scrolling="no" height="497px" frameborder="0" id="iOverTimeLogin"></iframe>
+    </div>
+    <div data-options="region:'north',border:false,split:true" style="height: 60px;">
+        <div class="define-head">
+            <div class="define-logo">
+                <div id="LoginTopLine">@Util.ConfigManager.ReadValueByKey(Util.ConfigurationFile.WebConfig, "WebMainTitle")</div>
+                <div id="LoginBotoomLine">@Util.ConfigManager.ReadValueByKey(Util.ConfigurationFile.WebConfig, "WebTitle")</div>
+            </div>
+            <div class="define-account">
+                <input id="btn_fs" type="button" value="全屏" />
+                @*当前在线人数:@System.Web.HttpContext.Current.Application["online"]*@
+            </div>
+        </div>
+    </div>
+    <div data-options="region:'west',split:true,title:'菜单列表'" style="width: 200px; height:100%; padding-top: 2px; background-color:#fff; overflow:auto">
+        <div class="panel-loading" id="LoadingDiv">Loading...</div>
+        <ul class="easyui-tree" id="tree"></ul>
+    </div>
+    <div data-options="region:'south',border:false" style="height: 20px;">
+        <div class="define-bottom" id="showTime">
+            <font style="margin-right:50px" color="black">@Util.ConfigManager.ReadValueByKey(Util.ConfigurationFile.WebConfig, "WebCopyRight") @System.DateTime.Now.Year &copy; 版权所有</font>
+            <font color="black">欢迎:<font color="red">@ViewBag.UserName</font> 账号:@ViewBag.UserId 所属部门:@ViewBag.DeptNo &nbsp;&nbsp;&nbsp;&nbsp; 当前时间:</font>
+            <font id="time" color="black"></font>
+        </div>
+    </div>
+    <div data-options="region:'center',border:false">
+        <div id="mainTab" class="easyui-tabs" data-options="fit:true">
+            <div title="Notice" data-options="closable:true" style="overflow:scroll; background:#fff">
+                <div style="padding: 0 20px 20px 20px; margin: 10px 0; line-height: 20px; color: #069; padding-bottom: 0;">
+                    <ul>
+                        <li><strong style="color:#F00">[2016-05-26] WNC Web Demo v1.3.1 正式版</strong></li>
+                        <li style="text-indent:2em"> - [修复] 新增后点击取消导致数据刷新bug</li>
+                        <li style="text-indent:2em"> - [修复] gridview自适应窗体bug修复</li>
+                        <li style="text-indent:2em"> - [修复] 多余滚动条清除,布局自适应</li>
+                        <li style="text-indent:2em"> - [修复] ie8下首次请求中文乱码</li>
+                        <li style="text-indent:2em"> - [新增] gridview数据行自定义格式化</li>
+                        <li style="text-indent:2em"> - [新增] 系统日志查询页面</li>
+                        <li style="text-indent:2em"> - [新增] 基础参数维护页面</li>
+                        <li style="text-indent:2em"> - [新增插件] log插件(深度集成log4net)</li>
+                        <li style="text-indent:2em"> - [新增插件] excel操作插件</li>
+                    </ul>
+                </div>
+                <div style="padding: 0 20px 20px 20px; margin: 10px 0; line-height: 20px; color: #069; padding-bottom: 0;">
+                    <ul>
+                        <li><strong style="color:#F00">[2016-05-16] WNC Web Demo v1.3 测试版</strong></li>
+                        <li style="text-indent:2em"> - [新增] 插件模块:为基本功能扩展留出空间</li>
+                        <li style="text-indent:2em"> - [新增] 插件形式实现文档上传下载预览功能</li>
+                        <li style="text-indent:2em"> - [新增] 插件形式实现Excel导入导出</li>
+                    </ul>
+                </div>
+                <div style="padding: 0 20px 20px 20px; margin: 10px 0; line-height: 20px; color: #069; padding-bottom: 0;">
+                    <ul>
+                        <li><strong style="color:#F00">[2016-04-01] WNC Web Demo v1.2 测试版</strong></li>
+                        <li style="text-indent:2em"> - [修复] 查询后自动选中最后一行数据导致删除异常</li>
+                        <li style="text-indent:2em"> - [修复] 新增权限管理功能</li>
+                    </ul>
+                </div>
+                <div style="padding: 0 20px 20px 20px; margin: 10px 0; line-height: 20px; color: #069; padding-bottom: 0;">
+                    <ul>
+                        <li><strong style="color:#F00">[2016-03-30] WNC Web Demo v1.1 测试版</strong></li>
+                        <li style="text-indent:2em"> - [修复] 跨域调用问题</li>
+                        <li style="text-indent:2em"> - [修复] 新增校验功能,弃用mvc model的校验功能</li>
+                        <li style="text-indent:2em"> - [新增] 查询页回车提交功能</li>
+                        <li style="text-indent:2em"> - [新增] 保存后页面自动清空功能</li>
+                    </ul>
+                </div>
+                <div style="padding: 0 20px 20px 20px; margin: 10px 0; line-height: 20px; color: #069; padding-bottom: 0;">
+                    <ul>
+                        <li><strong>[2016-03-24] WNC Web Demo v1.0 初始版本</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="tab_menu" class="easyui-menu" style="width: 150px;">
+        <div id="tab_menu-tabrefresh" data-options="iconCls:'icon-reload'">
+            刷新
+        </div>
+        <div id="tab_menu-openFrame">
+            在新窗口打开
+        </div>
+        <div id="tab_menu-tabcloseall">
+            关闭所有
+        </div>
+        <div id="tab_menu-tabcloseother">
+            关闭其他标签页
+        </div>
+        <div class="menu-sep">
+        </div>
+        <div id="tab_menu-tabcloseright">
+            关闭右边
+        </div>
+        <div id="tab_menu-tabcloseleft">
+            关闭左边
+        </div>
+        <div id="tab_menu-tabclose" data-options="iconCls:'icon-remove'">
+            关闭
+        </div>
+        <div id="menu" class="easyui-menu" style="width: 150px;">
+        </div>
+    </div>
+    <script src="@Url.Content("~/Scripts/jquery.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.easyui.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/mainpage.js")"></script>
+    <script src="@Url.Content("~/Scripts/jBox/jquery.jBox-2.3.min.js")"></script>
+    <link href="@Url.Content("~/Scripts/jBox/Skins/GrayCool/jbox.css")" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/themes/mystyle/css")
+    @*@Styles.Render("~/Content/themes/blue/css")*@
+    @*@Styles.Render("~/Content/themes/gray/css")*@
+    @*@Styles.Render("~/Content/themes/metro/css")*@
+    @Scripts.Render("~/bundles/home")
+</body>
+</html>

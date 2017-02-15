@@ -1,0 +1,95 @@
+﻿@{
+    Layout = null;
+
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>MainDemo.IndexAnaEdit</title>
+    <meta name="viewport" content="width=device-width" charset="utf-8" />
+</head>
+<body>
+    <form id="f_search">
+        <table cellpadding="0" cellspacing="0" style="width: 100%; text-align: left; table-layout: fixed; border: 1px solid #BABABA; padding: 8px 4px 4px 4px;margin-bottom:4px ">
+            <tr>
+                <td style="font-size: smaller; font-weight: bold; column-span: all; ">查詢條件</td>
+            </tr>
+            <tr style="padding: 4px 4px 4px 4px;">
+                <td class="myalldr">1.輸入框:</td>
+                <td class="myalldr"><input type="text" name="text1" class="easyui-validatebox" required="true" validtype="length[1,5]" style="width:120px;" /></td>
+                <td class="myalldr">2.輸入框:</td>
+                <td class="myalldr"><input type="text" name="text2" class="easyui-validatebox" required="true" validtype="length[1,5]" style="width:120px;" /></td>
+                <td class="myalldr">3.下拉框:</td>
+                <td class="myalldr">
+                    <select class="easyui-combobox" name="cbcountry" required="true" style="width:120px;">
+                        <option value="AL">china</option>
+                        <option value="AK">japan</option>
+                    </select>
+                </td>
+                <td class="myalldr">4.數字框:</td>
+                <td class="myalldr"><input class="easyui-numberbox" required="true" style="width:120px;" /></td>
+            </tr>
+            <tr>
+                <td class="myalldr">5.日期框:</td>
+                <td class="myalldr"><input class="easyui-datebox" style="width:120px;" /></td>
+                <td class="myalldr">6.時間框:</td>
+                <td class="myalldr"><input class="easyui-datetimebox" style="width:120px;" /></td>
+                <td class="myalldr">7.數字增減框:</td>
+                <td class="myalldr"><input class="easyui-numberspinner" style="width:120px;" /></td>
+                <td class="myalldr">8.時間增減框:</td>
+                <td class="myalldr"><input class="easyui-timespinner" style="width:120px;" /></td>
+            </tr>
+            <tr>
+                <td class="myalldr">9.滑動條:</td>
+                <td class="myalldr"><input class="easyui-slider" style="width:120px;" /></td>
+                <td class="myalldr">10.請輸入:</td>
+                <td class="myalldr"><input class="text" type="text" style="width:120px;" /></td>
+                <td class="myalldr">11.請輸入:</td>
+                <td class="myalldr"><input class="text" type="text" style="width:120px;" /></td>
+                <td class="myalldr">12.請輸入:</td>
+                <td class="myalldr"><input class="text" type="text" style="width:120px;" /></td>
+            </tr>
+        </table>
+    </form>
+    <div>
+        <input id="v_q_action" type="text" style="display:none" value="@ViewBag.MyQueryAction" />
+        <input id="v_e_action" type="text" style="display:none" value="@ViewBag.MyEditAction" />
+        <input id="v_a_action" type="text" style="display:none" value="@ViewBag.MyAddAction" />
+        <input id="v_d_action" type="text" style="display:none" value="@ViewBag.MyDeleteAction" />
+        <input id="bt_search" class="mybtn" type="button" value="查詢" />
+        <input id="bt_add" class="mybtn" type="button" value="新增" />
+        <input id="bt_del" class="mybtn" type="button" value="刪除" />
+        <input id="bt_clearall" class="mybtn" type="button" value="清除條件" />
+    </div>
+    <table id="datagrid" class="easyui-datagrid">
+        <thead>
+            <tr>
+                <th checkbox="true"></th>
+                <th field="KEYS">KEYS</th>
+                <th field="TEST1" width="60">测试</th>
+                <th field="TEST2" width="60">测试</th>
+                <th field="TEST3" width="60">测试</th>
+                <th field="TEST4" width="60">测试</th>
+                <th field="TEST5" width="60">测试</th>
+                <th field="TEST6" width="60">测试</th>
+            </tr>
+        </thead>
+    </table>
+
+    <script src="@Url.Content("~/Scripts/jquery.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.easyui.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/easyui/locale/easyui-lang-zh_TW.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jBox/jquery.jBox-2.3.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/control/pagecontrol.js")"></script>
+    <script src="@Url.Content("~/Scripts/control/querypage-e2.js")"></script>
+    <script src="@Url.Content("~/Scripts/control/foreditpage.js")"></script>
+    <link href="@Url.Content("~/Scripts/jBox/Skins/GrayCool/jbox.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/themes/icon.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/themes/gray/easyui.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/controls/MyStyle.css")" rel="stylesheet" />
+</body>
+</html>
+

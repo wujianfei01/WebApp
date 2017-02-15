@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LoggerPlugin</name>
+    </assembly>
+    <members>
+        <member name="T:LoggerPlugin.LogHelper">
+            <summary>
+            日志帮助类
+            </summary>
+        </member>
+        <member name="M:LoggerPlugin.LogHelper.WriteSqlDbLog(System.String,System.Exception)">
+            <summary>
+            向sqlserver写入日志:Info级别
+            </summary>
+            <param name="info">待写入的信息</param>
+            <param name="exption">[可选参数] 待写入的异常信息,包括堆栈信息</param>
+        </member>
+        <member name="M:LoggerPlugin.LogHelper.WriteSqlDbLogForDebug(System.String,System.Exception)">
+            <summary>
+            向sqlserver写入日志:Debug级别
+            </summary>
+            <param name="info">待写入的信息</param>
+            <param name="exption">[可选参数] 待写入的异常信息,包括堆栈信息</param>
+        </member>
+        <member name="M:LoggerPlugin.LogHelper.WriteSqlDbLogForError(System.String,System.Exception)">
+            <summary>
+            向sqlserver写入日志:Error级别
+            </summary>
+            <param name="info">待写入的信息</param>
+            <param name="exception">[可选参数] 待写入的异常信息,包括堆栈信息</param>
+        </member>
+        <member name="M:LoggerPlugin.LogHelper.WriteSqlDbLogForFatal(System.String,System.Exception)">
+            <summary>
+            向sqlserver写入日志:Fatal级别
+            </summary>
+            <param name="info">待写入的信息</param>
+            <param name="exception">[可选参数] 待写入的异常信息,包括堆栈信息</param>
+        </member>
+        <member name="M:LoggerPlugin.LogHelper.WriteSqlDbLogForWarn(System.String,System.Exception)">
+            <summary>
+            向sqlserver写入日志:Warn级别
+            </summary>
+            <param name="info">待写入的信息</param>
+            <param name="exception">[可选参数] 待写入的异常信息,包括堆栈信息</param>
+        </member>
+        <member name="M:LoggerPlugin.LogHelper.WriteOracleDbLog(System.String,System.Exception)">
+            <summary>
+            向oracle写入日志:Info级别
+            </summary>
+            <param name="info">待写入的信息</param>
+            /// <param name="exception">[可选参数] 待写入的异常信息,包括堆栈信息</param>
+        </member>
+        <member name="M:LoggerPlugin.LogHelper.WriteOracleDbLogForDebug(System.String,System.Exception)">
+            <summary>
+            向oracle写入日志:Debug级别
+            </summary>
+            <param name="info">待写入的信息</param>
+            /// <param name="exception">[可选参数] 待写入的异常信息,包括堆栈信息</param>
+        </member>
+        <member name="M:LoggerPlugin.LogHelper.WriteOracleDbLogForError(System.String,System.Exception)">
+            <summary>
+            向oracle写入日志:Error级别
+            </summary>
+            <param name="info">待写入的信息</param>
+            /// <param name="exception">[可选参数] 待写入的异常信息,包括堆栈信息</param>
+        </member>
+        <member name="M:LoggerPlugin.LogHelper.WriteOracleDbLogForFatal(System.String,System.Exception)">
+            <summary>
+            向oracle写入日志:Fatal级别
+            </summary>
+            <param name="info">待写入的信息</param>
+            /// <param name="exception">[可选参数] 待写入的异常信息,包括堆栈信息</param>
+        </member>
+        <member name="M:LoggerPlugin.LogHelper.WriteOracleDbLogForWarn(System.String,System.Exception)">
+            <summary>
+            向oracle写入日志:Warn级别
+            </summary>
+            <param name="info">待写入的信息</param>
+            /// <param name="exception">[可选参数] 待写入的异常信息,包括堆栈信息</param>
+        </member>
+        <member name="M:LoggerPlugin.LogHelper.WriteLog(System.String)">
+            <summary>
+            向文件系统写入Log:Info级别
+            </summary>
+            <param name="info">待写入的信息</param>
+        </member>
+        <member name="M:LoggerPlugin.LogHelper.ErrorLog(System.String,System.Exception)">
+            <summary>
+            向文件系统写入Log:Error级别
+            </summary>
+            <param name="info">待写入的信息</param>
+            <param name="ex">待写入的异常信息,包括堆栈信息</param>
+        </member>
+        <member name="M:LoggerPlugin.LogHelper.ErrorMsgFormat(System.Exception)">
+            <summary>
+            格式化错误信息
+            </summary>
+            <param name="ex">异常</param>
+            <returns>错误信息</returns>
+        </member>
+    </members>
+</doc>

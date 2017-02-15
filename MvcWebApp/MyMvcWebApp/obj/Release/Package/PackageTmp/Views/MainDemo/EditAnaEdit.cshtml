@@ -1,0 +1,125 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>MainDemo.EditAnaEdit</title>
+    <meta name="viewport" content="width=device-width" charset="utf-8" />
+</head>
+<body>
+    <div id="tab_e2" class="easyui-tabs">
+        <div title="表头" style="padding:4px;">
+            <input id="bt_back" class="mybtn" type="button" onclick="window.history.back(-1);" value="返回" />
+            <input id="bt_save" class="mybtn" type="button" value="保存" />
+            <input id="v_s_action" type="text" style="display:none" value="@ViewBag.MySaveAction" />
+
+            <form id="f_edit">
+                <table cellpadding="0" cellspacing="0" style="width: 100%; text-align: left; table-layout: fixed; border: 1px solid #BABABA; padding: 8px 4px 4px 4px;margin-bottom:4px ">
+                    <tr style="padding: 4px 4px 4px 4px;">
+                        <td class="myfirsttdnm">請輸入1:</td>
+                        <td class="myfirsttdnm"><input type="text" name="text1" class="easyui-validatebox" required="true" validtype="length[1,15]" style="width:96%;" value="@(this.Request["EORA"].Equals("a") ? "" :ViewBag.key)" /></td>
+                        <td class="myfirsttdnm">請輸入2:</td>
+                        <td class="myfirsttdnm"><input type="text" name="text2" class="easyui-validatebox" required="true" validtype="length[1,15]" style="width:96%;" value="@(this.Request["EORA"].Equals("a") ? "" :(ViewBag.HeaderData as System.Data.DataTable).Rows[0]["TEST1"].ToString())" /></td>
+                        <td class="myfirsttdnm">請輸入3:</td>
+                        <td class="myfirsttdnm"><input type="text" name="text3" class="easyui-validatebox" required="true" validtype="length[1,15]" style="width:96%;" value="@(this.Request["EORA"].Equals("a") ? "" :(ViewBag.HeaderData as System.Data.DataTable).Rows[0]["TEST2"].ToString())" /></td>
+                        <td class="myfirsttdnm">請輸入4:</td>
+                        <td class="myfirsttdlast"><input type="text" name="text4" class="easyui-validatebox" required="true" validtype="length[1,15]" style="width:96%;" value="@(this.Request["EORA"].Equals("a") ? "" :(ViewBag.HeaderData as System.Data.DataTable).Rows[0]["TEST3"].ToString())" /></td>
+                    </tr>
+                    <tr>
+                        <td class="myothertdnm">請輸入5:</td>
+                        <td class="myothertdnm"><input type="text" class="easyui-validatebox" required="true" validtype="length[1,15]" style="width:96%;" value="@(this.Request["EORA"].Equals("a") ? "" :(ViewBag.HeaderData as System.Data.DataTable).Rows[0]["TEST4"].ToString())" /></td>
+                        <td class="myothertdnm">請輸入6:</td>
+                        <td class="myothertdnm"><input type="text" class="easyui-validatebox" required="true" validtype="length[1,15]" style="width:96%;" value="@(this.Request["EORA"].Equals("a") ? "" :(ViewBag.HeaderData as System.Data.DataTable).Rows[0]["TEST5"].ToString())" /></td>
+                        <td class="myothertdnm">請輸入7:</td>
+                        <td class="myothertdnm"><input type="text" class="easyui-validatebox" required="true" validtype="length[1,15]" style="width:96%;" value="@(this.Request["EORA"].Equals("a") ? "" :(ViewBag.HeaderData as System.Data.DataTable).Rows[0]["TEST6"].ToString())" /></td>
+                        <td class="myothertdnm">請輸入8:</td>
+                        <td class="myothertdlast"><input type="text" class="easyui-validatebox" required="true" validtype="length[1,5]" style="width:96%;" /></td>
+                    </tr>
+                    <tr>
+                        <td class="myothertdnm">請輸入9:</td>
+                        <td class="myothertdnm"><input type="text" class="easyui-validatebox" required="true" validtype="length[1,5]" style="width:96%;" /></td>
+                        <td class="myothertdnm">請輸入10:</td>
+                        <td class="myothertdnm"><input type="text" class="easyui-validatebox" required="true" validtype="length[1,5]" style="width:96%;" /></td>
+                        <td class="myothertdnm">請輸入11:</td>
+                        <td class="myothertdnm"><input class="text" type="text" value="" style="width:96%;" /></td>
+                        <td class="myothertdnm">請輸入12:</td>
+                        <td class="myothertdlast"><input type="text" class="easyui-validatebox" required="true" validtype="length[1,5]" style="width:96%;" /></td>
+                    </tr>
+                    <tr>
+                        <td class="myothertdnm">請輸入13:</td>
+                        <td class="myothertdnm"><input type="text" class="easyui-validatebox" required="true" validtype="length[1,5]" style="width:96%;" /></td>
+                        <td class="myothertdnm">請輸入14:</td>
+                        <td class="myothertdnm"><input type="text" class="easyui-validatebox" required="true" validtype="length[1,5]" style="width:96%;" /></td>
+                        <td class="myothertdnm">請輸入15:</td>
+                        <td class="myothertdnm"><input class="text" type="text" value="" style="width:96%;" /></td>
+                        <td class="myothertdnm">請輸入16:</td>
+                        <td class="myothertdlast"><input type="text" class="easyui-validatebox" required="true" validtype="length[1,5]" style="width:96%;" /></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div title="表体" style="overflow:auto;padding:4px;">
+            <input id="bt_back_line" class="mybtn" type="button" onclick="window.history.back(-1);" value="返回" />
+            <input id="bt_save_4_e_line" class="mybtn" type="button" value="保存" />
+            <input id="v_s_action_4_e2_line" type="text" style="display:none" value="@ViewBag.MySaveAction4ELine" />
+            <input id="v_q_action_4_e2_line" type="text" style="display:none" value="@ViewBag.MyQueryAction4EditGridLine" />
+
+            <form id="f_edit_4_e_line">
+                <table cellpadding="0" cellspacing="0" style="width: 100%; text-align: left; table-layout: fixed; border: 1px solid #BABABA; padding: 8px 4px 4px 4px;margin-bottom:4px ">
+                    <tr style="padding: 4px 4px 4px 4px;">
+                        <td class="myfirsttdnm">表体1:</td>
+                        <td class="myfirsttdnm"><input type="text" name="TEST1" class="easyui-validatebox" required="true" validtype="length[1,15]" style="width:96%;" value="@ViewBag.key" /></td>
+                        <td class="myfirsttdnm">表体2:</td>
+                        <td class="myfirsttdnm"><input type="text" name="TEST2" class="easyui-validatebox" required="true" style="width:96%;" /></td>
+                        <td class="myfirsttdnm">表体3:</td>
+                        <td class="myfirsttdnm"><input type="text" name="TEST3" class="easyui-validatebox" required="true" style="width:96%;" /></td>
+                        <td class="myfirsttdnm">表体4:</td>
+                        <td class="myfirsttdlast"><input type="text" name="TEST4" class="easyui-validatebox" required="true" style="width:96%;" /></td>
+                    </tr>
+                    <tr>
+                        <td class="myothertdnm">表体5:</td>
+                        <td class="myothertdnm"><input type="text" name="TEST5" class="easyui-validatebox" required="true" validtype="length[1,5]" style="width:96%;" /></td>
+                        <td class="myothertdnm">表体6:</td>
+                        <td class="myothertdnm"><input type="text" name="TEST6" class="easyui-validatebox" style="width:96%;" /></td>
+                        <td class="myothertdnm">表体7:</td>
+                        <td class="myothertdnm"><input class="text" name="TEST6" type="text" value="" style="width:96%;" /></td>
+                        <td class="myothertdnm">表体8:</td>
+                        <td class="myothertdlast"><input type="text" name="TEST6" class="easyui-validatebox" style="width:96%;" /></td>
+                    </tr>
+                </table>
+            </form>
+
+            <table id="datagrid" class="easyui-datagrid">
+                <thead>
+                    <tr>
+                        <th checkbox="true"></th>
+                        <th field="KEYS">KEYS</th>
+                        <th field="TEST1" width="60">测试</th>
+                        <th field="TEST2" width="60">测试</th>
+                        <th field="TEST3" width="60">测试</th>
+                        <th field="TEST4" width="60">测试</th>
+                        <th field="TEST5" width="60">测试</th>
+                        <th field="TEST6" width="60">测试</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div title="清单明细" style="padding:4px;">
+            暂无
+        </div>
+    </div>
+    <script src="@Url.Content("~/Scripts/jquery.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.easyui.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/easyui/locale/easyui-lang-zh_TW.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jBox/jquery.jBox-2.3.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/control/crossdomainvalid-e2.js")"></script>
+    <link href="@Url.Content("~/Scripts/jBox/Skins/GrayCool/jbox.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/themes/icon.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/themes/gray/easyui.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/controls/MyStyle.css")" rel="stylesheet" />
+</body>
+</html>

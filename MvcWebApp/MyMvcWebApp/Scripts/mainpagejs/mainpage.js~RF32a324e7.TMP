@@ -1,0 +1,74 @@
+﻿//綁定event
+$(document).ready(function () {
+    InitGrid();
+    //LoadDataforGrid();//初始加載或者不加載數據
+    $("#bt_search").click(
+   function () {
+       $.jBox.tip("正在查詢......", 'loading');
+
+       $('#f_search').form('submit', {
+           onSubmit: function () {
+               var fv = $(this).form('validate');//对数据进行格式化
+               if (fv)
+                   $.jBox.tip("數據有誤!");
+               return fv;
+           },
+           success: function (data) {
+               var jbox = $.jBox;
+               //debugger;
+               var vData = $.parseJSON(data);
+               $('#datagrid').datagrid('loadData', vData); //将数据绑定到datagrid   
+
+               if (vData.total == 0)
+                   jbox.tip("沒有查詢到數據!");
+               else
+                   jbox.tip("查詢成功!");
+           }
+       });
+   }
+ );
+})
+//初始化grid以及個人設置
+function InitGrid() {
+    $('#datagrid').datagrid({
+        idField: 'id',
+        striped: true,
+        singleSelect: true,
+        title: '數據列表',
+        height: 400,
+        fitColumns: true,
+        collapsible: true,
+        fit: false,
+        rownumbers: true,
+        pagination: true,
+        nowrap: false,
+        pageSize: 10,
+        pageList: [10, 20, 50, 100, 150, 200],
+        showFooter: true,
+        onClickCell: function (rowIndex, field, value) {
+            //beginEditing(rowIndex, field, value)
+            $.jBox.tip("開始編輯!");
+        },
+        formatter: function (value, row, index) {
+            //if (row.user) {
+            //    return row.user.name;
+            //} else {
+            //    return value;
+            //}
+            //row轉換器
+        }
+    });
+};
+//加載初始數據
+function LoadDataforGrid() {
+    $.ajax({
+        type: "POST",
+        url: "/MainDemo/GetData",
+        success: function (data) {
+            var vData = $.parseJSON(data);
+            $('#datagrid').datagrid('loadData', vData); //将数据绑定到datagrid  
+            if (vData.total == 0)
+                $.jBox.tip("沒有查詢到數據!");
+        }
+    });
+}

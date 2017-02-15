@@ -1,0 +1,82 @@
+﻿@{
+    Layout = null;
+}
+    <form id="f_edit">
+        <table cellpadding="0" cellspacing="0" style="width: 100%; text-align: left; table-layout: fixed; border: 1px solid #BABABA; padding: 8px 4px 4px 4px;margin-bottom:4px ">
+            <tr style="padding: 4px 4px 4px 4px;">
+                <td class="myfirsttdnm">請輸入1:</td>
+                <td class="myfirsttdnm"><input type="text" name="text1" class="easyui-validatebox" required="true" validtype="length[1,5]" style="width: 96%;" value="@ViewBag.key" /></td>
+                <td class="myfirsttdnm">請輸入2:</td>
+                <td class="myfirsttdnm"><input type="text" name="text2" class="easyui-validatebox" required="true" validtype="length[1,5]" style="width: 96%;" /></td>
+                <td class="myfirsttdnm">請輸入3:</td>
+                <td class="myfirsttdnm"><input type="text" name="text3" class="easyui-validatebox" required="true" validtype="length[1,5]" style="width: 96%;" /></td>
+                <td class="myfirsttdnm">請輸入4:</td>
+                <td class="myfirsttdlast"><input type="text" name="text4" class="easyui-validatebox" required="true" validtype="length[1,5]" style="width: 96%;" /></td>
+            </tr>
+            <tr>
+                <td class="myothertdnm">請輸入5:</td>
+                <td class="myothertdnm"><input type="text" class="easyui-validatebox" required="true" validtype="length[1,5]" style="width: 96%;" /></td>
+                <td class="myothertdnm">請輸入6:</td>
+                <td class="myothertdnm"><input type="text" class="easyui-validatebox" required="true" validtype="length[1,5]" style="width: 96%;" /></td>
+                <td class="myothertdnm">請輸入7:</td>
+                <td class="myothertdnm"><input type="text" class="easyui-validatebox" required="true" validtype="length[1,5]" style="width: 96%;" /></td>
+                <td class="myothertdnm">請輸入8:</td>
+                <td class="myothertdlast"><input type="text" class="easyui-validatebox" required="true" validtype="length[1,5]" style="width: 96%;" /></td>
+            </tr>
+            <tr>
+                <td class="myothertdnm">請輸入9:</td>
+                <td class="myothertdnm"><input type="text" class="easyui-validatebox" required="true" validtype="length[1,5]" style="width: 96%;" /></td>
+                <td class="myothertdnm">請輸入10:</td>
+                <td class="myothertdnm"><input type="text" class="easyui-validatebox" required="true" validtype="length[1,5]" style="width: 96%;" /></td>
+                <td class="myothertdnm">請輸入11:</td>
+                <td class="myothertdnm"><input class="text" type="text" value="" style="width: 96%;" /></td>
+                <td class="myothertdnm">請輸入12:</td>
+                <td class="myothertdlast"><input type="text" class="easyui-validatebox" required="true" validtype="length[1,5]" style="width: 96%;" /></td>
+            </tr>
+            <tr>
+                <td class="myothertdnm">請輸入13:</td>
+                <td class="myothertdnm"><input type="text" class="easyui-validatebox" required="true" validtype="length[1,5]" style="width: 96%;" /></td>
+                <td class="myothertdnm">請輸入14:</td>
+                <td class="myothertdnm"><input type="text" class="easyui-validatebox" required="true" validtype="length[1,5]" style="width: 96%;" /></td>
+                <td class="myothertdnm">請輸入15:</td>
+                <td class="myothertdnm"><input class="text" type="text" value="" style="width: 96%;" /></td>
+                <td class="myothertdnm">請輸入16:</td>
+                <td class="myothertdlast"><input type="text" class="easyui-validatebox" required="true" validtype="length[1,5]" style="width: 96%;" /></td>
+            </tr>
+            <tr>
+                <td class="myothertdnm">請輸入17:</td>
+                <td class="myothertdnm"><input type="text" class="easyui-validatebox" required="true" validtype="length[1,5]" style="width: 96%;" /></td>
+                <td class="myothertdnm">請輸入18:</td>
+                <td class="myothertdnm"><input type="text" class="easyui-validatebox" required="true" validtype="length[1,5]" style="width: 96%;" /></td>
+                <td class="myothertdnm">請輸入19:</td>
+                <td class="myothertdnm"><input class="text" type="text" value="" style="width: 96%;" /></td>
+                <td class="myothertdnm">請輸入20:</td>
+                <td class="myothertdlast"><input type="text" class="easyui-validatebox" required="true" validtype="length[1,5]" style="width: 96%;" /></td>
+            </tr>
+            <tr>
+                <td class="myothertdnm">請輸入21:</td>
+                <td class="myothertdnm"><input type="text" class="easyui-validatebox" required="true" validtype="length[1,5]" style="width: 96%;" /></td>
+                <td class="myothertdnm">請輸入22:</td>
+                <td class="myothertdnm"><input type="text" class="easyui-validatebox" required="true" validtype="length[1,5]" style="width: 96%;" /></td>
+                <td class="myothertdnm">請輸入23:</td>
+                <td class="myothertdnm"><input class="text" type="text" value="" style="width: 96%;" /></td>
+                <td class="myothertdnm">請輸入24:</td>
+                <td class="myothertdlast"><input type="text" class="easyui-validatebox" required="true" validtype="length[1,5]" style="width: 96%;" /></td>
+            </tr>
+        </table>
+        @*此按鈕用來解決跨域問題--eric.wu*@
+        <input id="bt_valid" class="mybtn" type="button" value="校验" style="display:none" />
+        <input id="v_s_action" type="text" style="display:none" value="@ViewBag.MySaveAction" />
+    </form>
+
+    <script src="@Url.Content("~/Scripts/jquery.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.easyui.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/easyui/locale/easyui-lang-zh_TW.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jBox/jquery.jBox-2.3.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/mainpagejs/crossdomainvalid.js")"></script>
+    <link href="@Url.Content("~/Scripts/jBox/Skins/GrayCool/jbox.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/themes/icon.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/themes/gray/easyui.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/controls/MyStyle.css")" rel="stylesheet" />

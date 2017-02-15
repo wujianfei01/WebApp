@@ -1,0 +1,36 @@
+﻿@{
+    Layout = null;
+
+}
+
+@{
+    ViewBag.Title = "Index";
+}
+<script src="~/Scripts/jBox/jquery-1.4.2.min.js"></script>
+<script src="~/Scripts/jBox/jquery.jBox-2.3.min.js"></script>
+<link href="~/Scripts/jBox/Skins/GrayCool/jbox.css" rel="stylesheet" />
+<h2>Index</h2>
+<input id="Text1" type="text" value="主測試頁面" />
+<script>
+    $("#Text1").click(function () {
+        //$.jBox.tip("正在提交......", 'loading');
+        //window.setTimeout(function () { $.jBox.tip('提交已完成!', 'success'); }, 2000);
+
+        //$.jBox.tip($(this).val());
+
+        var html = "<div style='padding:10px;'>输入点什么：<input type='text' id='some' name='some' /></div>";
+        var submit = function (v, h, f) {
+            if (f.some == '') {
+                // f.some 或 h.find('#some').val() 等于 top.$('#some').val()
+                top.$.jBox.tip("请输入点什么。", 'error', { focusId: "some" }); // 关闭设置 some 为焦点
+                return false;
+            }
+            top.$.jBox.info("你输入了：" + f.some);
+
+            return true;
+        };
+
+        //top.$.jBox(html, { title: "输入", submit: submit });
+
+    })
+</script>

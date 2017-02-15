@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Util</name>
+    </assembly>
+    <members>
+        <member name="M:Util.ConfigManager.ReadValueByKey(Util.ConfigurationFile,System.String)">
+            <summary>
+            对[appSettings]节点依据Key值读取到Value值，返回字符串
+            </summary>
+            <param name="configurationFile">要操作的配置文件名称,枚举常量</param>
+            <param name="key">要读取的Key值</param>
+            <returns>返回Value值的字符串</returns>
+        </member>
+        <member name="M:Util.ConfigManager.ReadConnectionStringByName(Util.ConfigurationFile,System.String)">
+            <summary>
+            对[connectionStrings]节点依据name值读取到connectionString值，返回字符串
+            </summary>
+            <param name="configurationFile">要操作的配置文件名称,枚举常量</param>
+            <param name="name">要读取的name值</param>
+            <returns>返回connectionString值的字符串</returns>
+        </member>
+        <member name="M:Util.ConfigManager.UpdateOrCreateAppSetting(Util.ConfigurationFile,System.String,System.String)">
+            <summary>
+            更新或新增[appSettings]节点的子节点值，存在则更新子节点Value,不存在则新增子节点，返回成功与否布尔值
+            </summary>
+            <param name="configurationFile">要操作的配置文件名称,枚举常量</param>
+            <param name="key">子节点Key值</param>
+            <param name="value">子节点value值</param>
+            <returns>返回成功与否布尔值</returns>
+        </member>
+        <member name="M:Util.ConfigManager.UpdateOrCreateConnectionString(Util.ConfigurationFile,System.String,System.String,System.String)">
+            <summary>
+            更新或新增[connectionStrings]节点的子节点值，存在则更新子节点,不存在则新增子节点，返回成功与否布尔值
+            </summary>
+            <param name="configurationFile">要操作的配置文件名称,枚举常量</param>
+            <param name="name">子节点name值</param>
+            <param name="connectionString">子节点connectionString值</param>
+            <param name="providerName">子节点providerName值</param>
+            <returns>返回成功与否布尔值</returns>
+        </member>
+        <member name="M:Util.ConfigManager.DeleteByKey(Util.ConfigurationFile,System.String)">
+            <summary>
+            删除[appSettings]节点中包含Key值的子节点，返回成功与否布尔值
+            </summary>
+            <param name="configurationFile">要操作的配置文件名称,枚举常量</param>
+            <param name="key">要删除的子节点Key值</param>
+            <returns>返回成功与否布尔值</returns>
+        </member>
+        <member name="M:Util.ConfigManager.DeleteByName(Util.ConfigurationFile,System.String)">
+            <summary>
+            删除[connectionStrings]节点中包含name值的子节点，返回成功与否布尔值
+            </summary>
+            <param name="configurationFile">要操作的配置文件名称,枚举常量</param>
+            <param name="name">要删除的子节点name值</param>
+            <returns>返回成功与否布尔值</returns>
+        </member>
+        <member name="M:Util.DataTableHelper.GetPagedTable(System.Data.DataTable,System.Int32,System.Int32)">
+            <summary>
+            DataTable分页:大數據量下性能可能不佳,後期優化
+            </summary>
+            <param name="dt">DataTable</param>
+            <param name="PageIndex">页索引,注意:从1开始</param>
+            <param name="PageSize">每页大小</param>
+            <returns>分好页的DataTable数据:第1页-每页10条</returns> 
+        </member>
+        <member name="M:Util.DataTableHelper.PageCount(System.Int32,System.Int32)">
+            <summary>
+            返回分页的页数
+            </summary>
+            <param name="count">总条数</param>
+            <param name="pageye">每页显示多少条</param>
+            <returns>如果 结尾为0:则返回1</returns>
+        </member>
+        <member name="T:Util.UserInfo">
+            <summary>
+            當前用戶信息
+            </summary>
+        </member>
+        <member name="P:Util.UserInfo.EUserName">
+            <summary>
+            員工英文名稱
+            </summary>
+        </member>
+        <member name="P:Util.UserInfo.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Util.UserInfo.EmpNo">
+            <summary>
+            工號
+            </summary>
+        </member>
+        <member name="P:Util.UserInfo.DeptNo">
+            <summary>
+            部門號
+            </summary>
+        </member>
+    </members>
+</doc>

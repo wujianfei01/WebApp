@@ -1,0 +1,35 @@
+﻿.mybtn
+{
+    height: 30px;
+    width: 70px;
+    background-color: #005BBB;
+    color: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    border: 0px;
+}
+
+.myfirsttdnm {font-size: smaller; border-top-style: solid; border-right-style: dotted; border-width: 1px; border-color: #BABABA; 
+}
+
+.myfirsttdlast {font-size: smaller; border-top-style: solid; border-width: 1px; border-color: #BABABA; 
+}
+
+.myothertdnm {font-size: smaller; border-top-style: dotted; border-right-style: dotted; border-width: 1px; border-color: #BABABA; 
+}
+
+.myothertdlast {font-size: smaller; border-top-style: dotted; border-width: 1px; border-color: #BABABA; 
+}
+
+.myalldr {
+    font-size: smaller;
+    border-bottom-style: dotted;
+    border-left-style: dotted;
+    border-top-style: dotted;
+    border-right-style: dotted;
+    border-width: 1px;
+    border-color: #BABABA;
+}
+

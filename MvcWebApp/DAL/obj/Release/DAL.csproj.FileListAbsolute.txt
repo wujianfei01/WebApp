@@ -1,0 +1,8 @@
+C:\Users\16012849\Downloads\MvcWebApp\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+E:\MvcWebApp\DAL\bin\Release\DAL.dll
+E:\MvcWebApp\DAL\bin\Release\DAL.pdb
+E:\MvcWebApp\DAL\bin\Release\MODEL.dll
+E:\MvcWebApp\DAL\bin\Release\MODEL.pdb
+E:\MvcWebApp\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+E:\MvcWebApp\DAL\obj\Release\DAL.dll
+E:\MvcWebApp\DAL\obj\Release\DAL.pdb

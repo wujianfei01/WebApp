@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DAL</name>
+    </assembly>
+    <members>
+        <member name="M:DAL.Interface.IDal.CnnectionDefault(System.String)">
+            <summary>
+            oracle連接字符串
+            </summary>
+        </member>
+        <member name="M:DAL.Interface.IDal.QuerySql(System.String)">
+            <summary>
+            查詢
+            </summary>
+            <param name="sql">sql語句</param>
+            <returns></returns>
+        </member>
+        <member name="M:DAL.Interface.IDal.QuerySqlWithParameters(System.String,System.Collections.Generic.List{System.Object})">
+            <summary>
+            查詢
+            </summary>
+            <param name="sql">sql語句with parameters</param>
+            <param name="ParList">List of OracleParameter</param>
+            <returns></returns>
+        </member>
+        <member name="M:DAL.Interface.IDal.OptSql(System.String)">
+            <summary>
+            操作語句
+            </summary>
+            <returns>影響行數</returns>
+        </member>
+        <member name="M:DAL.Interface.IDal.OptSql(System.String,System.Object)">
+            <summary>
+            操作語句
+            </summary>
+            <param name="sql"></param>
+            <param name="conn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DAL.Interface.IDal.OptSqlWithParameters(System.String,System.Collections.Generic.List{System.Object})">
+            <summary>
+            操作語句WithParameters
+            </summary>
+            <param name="sql">sql語句with parameters</param>
+            <param name="ParList">List of OracleParameter</param>
+            <returns></returns>
+        </member>
+        <member name="M:DAL.Interface.IDal.OptSqlWithParameters(System.String,System.Collections.Generic.List{System.Object},System.Object)">
+            <summary>
+            操作數據 With Parameters And Transaction
+            在調用此方法前打開事務
+            XXXConnection conn = new XXXConnection(IDal.CnnectionDefault(connKey));
+            XXXTransaction ort = conn.BeginTransaction();
+            Your Code
+            ort.Commit();
+            </summary>
+            <param name="sql"></param>
+            <param name="ParList"></param>
+            <param name="conn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DAL.OracleDal.PrepareCommand(System.Data.OracleClient.OracleCommand,System.Data.OracleClient.OracleConnection,System.Data.OracleClient.OracleTransaction,System.Data.CommandType,System.String,System.Collections.Generic.List{System.Object})">
+            <summary>
+            準備command之參數
+            </summary>
+            <param name="cmd">commad對象</param>
+            <param name="conn">connection對象</param>
+            <param name="trans">transaction對象</param>
+            <param name="cmdType">選項enum commandType</param>
+            <param name="cmdText"></param>
+            <param name="cmdParms">參數list</param>
+        </member>
+        <member name="M:DAL.OracleDal.OptSqlWithParameters(System.String,System.Collections.Generic.List{System.Object},System.Object)">
+            <summary>
+            操作數據 With Transaction
+            </summary>
+            <param name="sql"></param>
+            <param name="ParList"></param>
+            <param name="conn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DAL.SqlServerDal.OptSqlWithParameters(System.String,System.Collections.Generic.List{System.Object})">
+            <summary>
+            操作數據
+            </summary>
+            <param name="sql"></param>
+            <param name="ParList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DAL.SqlServerDal.OptSqlWithParameters(System.String,System.Collections.Generic.List{System.Object},System.Object)">
+            <summary>
+            操作數據 With Transaction
+            </summary>
+            <param name="sql"></param>
+            <param name="ParList"></param>
+            <param name="conn"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

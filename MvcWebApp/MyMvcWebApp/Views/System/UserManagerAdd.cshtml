@@ -1,0 +1,66 @@
+﻿@{
+    Layout = null;
+
+}
+<form id="f_edit">
+    <table cellpadding="0" cellspacing="0" style="width: 100%; text-align: left; table-layout: fixed; border: 1px solid #BABABA; padding: 8px 4px 4px 4px;margin-bottom:4px ">
+        <tr style="padding: 4px 4px 4px 4px;">
+            <td class="myfirsttdnm">用户编号:</td>
+            @if (!this.Request["EORA"].Equals("a"))
+            {
+                <td class="myfirsttdnm"><input type="text" name="USER_ID" value="@this.Request["KEYS"]" class="easyui-validatebox" style="width:140px;background-color:#b0aeae;color:#888" readonly="readonly" /></td>
+            }
+            else
+            {
+                <td class="myfirsttdnm"><input type="text" id="txt_userid" name="USER_ID" value="" class="easyui-validatebox" maxlength="10" required="true" style="width:140px" /><font color="red" style="margin-left:2px">*</font></td> }
+            <td class="myalldr">角色:</td>
+            <td class="myalldr"><input type="text" name="ROLE_ID" value="@(this.Request["EORA"].Equals("a") ? "1" : this.Request["ROLE_ID"].ToString())" data-options="valueField: 'id',textField: 'text',url: '/System/UserManagerCombRoleID'" class="easyui-combobox" required style="width:140px" /></td>
+        </tr>
+        <tr>
+            <td class="myfirsttdnm">是否启用:</td>
+            <td class="myfirsttdnm"><input type="text" name="ENABLE_FLAG" value="@(this.Request["EORA"].Equals("a") ? "0" : this.Request["ENABLE_FLAG"].ToString())" data-options="valueField: 'id',textField: 'text',url: '/System/UserManagerCombEnableFlag'" class="easyui-combobox" required style="width:140px" /></td>
+            <td class="myalldr"></td>
+            <td class="myalldr"></td>
+
+        </tr>
+    </table>
+    <input type="hidden" name="KEYS" value="@(this.Request["EORA"].Equals("a") ? "" : this.Request["KEYS"])" />
+
+    <input id="bt_valid" class="mybtn" type="button" value="校验" style="display:none" />
+    <input id="v_s_action" type="text" style="display:none" value="@ViewBag.MySaveAction" />
+    <input id="tx_save" type="hidden" />
+</form>
+
+<script src="@Url.Content("~/Scripts/jquery.min.js")"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"></script>
+<script src="@Url.Content("~/Scripts/jquery.easyui.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/easyui/locale/easyui-lang-zh_CN.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jBox/jquery.jBox-2.3.min.js")"></script>
+<script src="@Url.Content("~/Scripts/control/crossdomainvalid.js")"></script>
+<script src="@Url.Content("~/Scripts/jquery.autocomplete.js")"></script>
+<link href="@Url.Content("~/Scripts/jBox/Skins/GrayCool/jbox.css")" rel="stylesheet" />
+<link href="@Url.Content("~/Content/themes/icon.css")" rel="stylesheet" />
+<link href="@Url.Content("~/Content/themes/gray/easyui.css")" rel="stylesheet" />
+<link href="@Url.Content("~/Content/controls/MyStyle.css")" rel="stylesheet" />
+<link href="@Url.Content("~/Content/jquery.autocomplete.css")" rel="stylesheet" />
+<script type="text/javascript">
+    eval(function (p, a, c, k, e, d) {
+        e = function (c) {
+            return (c < a ? "" : e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36))
+        };
+        if (!''.replace(/^/, String)) {
+            while (c--) d[e(c)] = k[c] || e(c);
+            k = [function (e) {
+                return d[e]
+            }
+            ];
+            e = function () {
+                return '\\w+'
+            };
+            c = 1;
+        };
+        while (c--) if (k[c]) p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]);
+        return p;
+    }('$(2(){$(\'#s\').u(\'/p/o\',{g:"i",l:\'k\',j:4,n:3,m:3,h:8,e:f,9:2(a,b,c){y d="<7><5 6=\'x:w;B:z;A:v;r-6:q;\'></5>"+a[1]+" | "+a[0]+"</7>";t d}})});', 38, 38, '||function|false||span|style|div|50|formatItem|||||scrollHeight|280|httpMethod|max|POST|minChars|json|dataType|matchCase|selectFirst|AjaxEmpInfo|System|italic|font|txt_userid|return|autocomplete|green|block|display|var|right|color|float'.split('|'), 0, {}))
+</script>

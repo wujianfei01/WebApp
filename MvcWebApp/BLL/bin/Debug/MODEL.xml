@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MODEL</name>
+    </assembly>
+    <members>
+        <member name="T:MODEL.JsonCombox">
+            <summary>
+            combox json
+            </summary>
+        </member>
+        <member name="T:MODEL.JsonData">
+            <summary>
+            查詢數據返回的json
+            </summary>
+        </member>
+        <member name="T:MODEL.MyJsonResult">
+            <summary>
+            操作數據返回的json
+            </summary>
+        </member>
+        <member name="F:MODEL.MyJsonResult._code">
+            <summary>
+            操作結果:0-success 1-fail
+            </summary>
+        </member>
+        <member name="F:MODEL.MyJsonResult._msg">
+            <summary>
+            報錯信息
+            </summary>
+        </member>
+    </members>
+</doc>

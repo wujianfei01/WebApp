@@ -1,0 +1,27 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <form action="Upload" method="post" enctype="multipart/form-data">
+            <span>上传文件</span>
+            <br />
+            <input type="file" name="file" />
+            <br />
+            <br />
+            <input id="ButtonUpload" type="submit" title="Excel插件的使用演示" value="提交" />
+        </form>
+        <a href="~/Upload/Template.xlsx">下載模板</a>
+        <a href="@ViewBag.Prev">預覽上傳檔案</a>
+        <a href="@ViewBag.Download">下載檔案</a>
+    </div>
+</body>
+</html>
