@@ -963,3 +963,15 @@ function IsDecimal(field, num) {
     } else if (num > 0) return false;
     return true;
 };
+//获得当前请求的url的key和value对的value
+function GetQueryString(strName) {
+    var strHref = document.location.href;
+    var intPos = strHref.indexOf("?");
+    var strRight = strHref.substr(intPos + 1);
+    var arrTmp = strRight.split("&");
+    for (var i = 0; i < arrTmp.length; i++) {
+        var arrTemp = arrTmp[i].split("=");
+        if (arrTemp[0].toUpperCase() == strName.toUpperCase()) return arrTemp[1];
+    }
+    return "";
+};
